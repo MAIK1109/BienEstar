@@ -11,6 +11,13 @@
             background-size: cover;
             margin: 0;
             padding: 20px;
+            display: flex;
+        }
+
+        /* Contenedor principal */
+        .main-content {
+            flex: 1;
+            margin-right: 320px; /* deja espacio para la barra lateral */
         }
 
         header {
@@ -18,12 +25,7 @@
             color: white;
             padding: 20px;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
             text-align: center;
-            position: relative;
         }
 
         header img {
@@ -73,44 +75,107 @@
         a:hover {
             background-color: #005f99;
         }
+
+        /* Sección lateral */
+        .contacto {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            width: 280px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .contacto h3 {
+            color: #007acc;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contacto p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+        }
+
+        .whatsapp-btn img {
+            width: 24px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="D:/1. INGENIERIA DE SISTEMAS/5. QUINTO SEMESTRE/INNOVACION TECNOLOGICA/BienEstar/logo.jpg" alt="Logo BienEstar">
-        <h1>BienEstar</h1>
-        <p>Promoviendo el equilibrio emocional en los estudiantes</p>
-    </header>
+    <div class="main-content">
+        <header>
+            <img src="D:/1. INGENIERIA DE SISTEMAS/5. QUINTO SEMESTRE/INNOVACION TECNOLOGICA/BienEstar/logo.jpg" alt="Logo BienEstar">
+            <h1>BienEstar</h1>
+            <p>Promoviendo el equilibrio emocional en los estudiantes</p>
+        </header>
 
-    <section>
-        <h2>Introducción</h2>
-        <p>
-            Las emociones juegan un papel fundamental en la vida de los estudiantes, ya que influyen directamente 
-            en su capacidad de aprendizaje, concentración y desarrollo personal. Sentimientos como la ansiedad, 
-            el estrés o la tristeza pueden afectar el rendimiento académico y las relaciones interpersonales, 
-            por lo que resulta esencial reconocer y comprender estos estados emocionales.
-        </p>
-        <p>
-            Detectar a tiempo los cambios en el estado emocional permite brindar apoyo oportuno, 
-            evitar el aislamiento y fomentar un entorno académico saludable. 
-            La identificación temprana de signos de desmotivación, ansiedad o depresión puede marcar 
-            una gran diferencia en el bienestar integral de los estudiantes, ayudándolos a fortalecer su salud mental 
-            y a alcanzar sus metas personales y profesionales.
-        </p>
-    </section>
+        <section>
+            <h2>Introducción</h2>
+            <p>
+                Las emociones juegan un papel fundamental en la vida de los estudiantes, ya que influyen directamente 
+                en su capacidad de aprendizaje, concentración y desarrollo personal. Sentimientos como la ansiedad, 
+                el estrés o la tristeza pueden afectar el rendimiento académico y las relaciones interpersonales, 
+                por lo que resulta esencial reconocer y comprender estos estados emocionales.
+            </p>
+            <p>
+                Detectar a tiempo los cambios en el estado emocional permite brindar apoyo oportuno, 
+                evitar el aislamiento y fomentar un entorno académico saludable. 
+                La identificación temprana de signos de desmotivación, ansiedad o depresión puede marcar 
+                una gran diferencia en el bienestar integral de los estudiantes, ayudándolos a fortalecer su salud mental 
+                y a alcanzar sus metas personales y profesionales.
+            </p>
+        </section>
 
-    <section>
-        <h2>Participa en nuestra encuesta</h2>
-        <p>
-            Con el fin de conocer mejor el estado emocional de nuestra comunidad estudiantil, 
-            te invitamos a participar en la siguiente encuesta. 
-            Tu respuesta es muy valiosa para seguir construyendo espacios de acompañamiento y bienestar.
-        </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn9RpbmtZVkFxwJiVpZfjCZOe9OTR4HvsYB_6e5yjtMuqHuA/viewform?usp=header" target="_blank">
-            Ir a la encuesta
+        <section>
+            <h2>Participa en nuestra encuesta</h2>
+            <p>
+                Con el fin de conocer mejor el estado emocional de nuestra comunidad estudiantil, 
+                te invitamos a participar en la siguiente encuesta. 
+                Tu respuesta es muy valiosa para seguir construyendo espacios de acompañamiento y bienestar.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn9RpbmtZVkFxwJiVpZfjCZOe9OTR4HvsYB_6e5yjtMuqHuA/viewform?usp=header" target="_blank">
+                Ir a la encuesta
+            </a>
+        </section>
+    </div>
+
+    <!-- Sección lateral de contacto -->
+    <aside class="contacto">
+        <h3>Apoyo Emocional</h3>
+        <p><strong>📧 Correo:</strong></p>
+        <p><strong></strong> bienestaruniversitario@jdc.edu.co</p>
+        <p><strong>📞 Teléfono:</strong> +57 317 332 0191</p>
+        <p><strong>🕒 Horario:</strong> Lunes a Viernes<br>8:00 a.m. - 5:00 p.m.</p>
+
+        <a class="whatsapp-btn" href="https://wa.me/573173320191" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Contactar por WhatsApp
         </a>
-    </section>
+    </aside>
 
 </body>
 </html>
+
